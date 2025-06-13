@@ -78,3 +78,120 @@ class productOfRealNumber
    System.out.println("getProductValue"+getProductValue);
  }
 }
+----------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+class CalculateCircleAreaAndCir
+{
+ public static void main(String[] args)
+ {
+     Scanner scanner =new Scanner(System.in);
+     double piValue=Math.PI;
+     int radius=scanner.nextInt();
+     double circum= 2* piValue *radius;
+     System.out.println("circum"+circum);
+     double area= piValue*Math.pow(radius,2);
+     System.out.println("area"+area);
+     scanner.close();
+ }     
+}    
+-----------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+class checkNumberIsMultipleByFive
+{
+ public static void main(String[] args)
+ {
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Enter the number :");
+     int number=sc.nextInt();
+     if(number%5 ==0)
+     {
+      System.out.println("Given number is multiple by 5");
+     }
+     else
+     {
+      System.out.println("Given number is  not multiple by 5");  
+     }
+     sc.close();
+ }
+}
+-----------------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+class checkNumberIsMultipleByFive
+{
+ public static void main(String[] args)
+ {
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Enter the number :");
+     int number=sc.nextInt();
+     if(number%5 ==0)
+     {
+      System.out.println("Given number is multiple by 5");
+     }
+     else
+     {
+      System.out.println("Given number is  not multiple by 5");  
+     }
+     sc.close();
+ }
+}
+------------------------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+class checkNumberIsMultipleByFive
+{
+ public static void main(String[] args)
+ {
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Enter the number :");
+     int number=sc.nextInt();
+     if(number%35 ==0)
+     {
+      System.out.println("Given number is multiple by 5");
+     }
+     else
+     {
+      System.out.println("Given number is  not multiple by 5");  
+     }
+     sc.close();
+ }
+}
+-----------------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+class AverageCalculator
+{
+ public static void main (String[] args)
+ {
+   Scanner sc=new Scanner(System.in);     
+   int count=0; double sum=0;
+   while(count <5)
+   {
+     System.out.print("Enter number"+(count+1)+":");
+     if(sc.hasNextDouble())
+     {
+         double number=sc.nextDouble();
+         sum=+number;
+         count++;
+     }     
+   }
+    double average=sum/5;
+    System.out.println("Average"+average);
+ }
+}
+-----------------------------------------------------------------------------------------------------------------------------
+    import java.util.Scanner;
+class ReverseNumber
+{
+  public static void main (String [] args)
+  {
+      Scanner sc =new Scanner(System.in);
+      int number =sc.nextInt();
+      int reversed=0;
+      while(number!=0)
+      {
+         int digit= number%10;
+         reversed=reversed*10+digit;
+         number /=10;
+      }
+    System.out.println("Reversed number: " + reversed);
+  }
+}    
+    
