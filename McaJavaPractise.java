@@ -194,4 +194,33 @@ class ReverseNumber
     System.out.println("Reversed number: " + reversed);
   }
 }    
+--------------------------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
+class PrintSumNumberWhile
+{
+  public static void main (String args[])
+  {
+      Scanner sc=new Scanner (System.in);
+      int number= sc.nextInt();
+      int sum=0;
+      while(number!=0)
+      {
+         int digit= number%10;
+         sum+=digit;
+         number /=10;
+      }
+      System.out.println("sum"+sum);
+      sc.close();
+  }
+}
+-------------------------------------------------------------------------------------------------------------------------
+import java.util.stream.IntStream;
+class RangeEven
+{
+ public static void main (String[] args)
+ {
+     IntStream.rangeClosed(100,150).filter(num->num%2==0).forEach(System.out::println);
+ }
+}
+-------------------------------------------------------------------------------------------------------------------------
     
