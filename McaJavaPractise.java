@@ -223,7 +223,28 @@ class RangeEven
  }
 }
 -------------------------------------------------------------------------------------------------------------------------
+//CheckPrimeorNot
+import java.util.stream.IntStream;
+class CheckPrimeNumberOrNot
+{
+ public static void main(String[] args)
+ {
+     int num=23;
+     boolean checkPrime=num>1 && IntStream.rangeClosed(2,(int)Math.sqrt(num)).
+     noneMatch(i->num %i==0);
+     if(checkPrime)
+     {
+       System.out.println("This is a prime Number"); 
+     }
+     else
+     {
+       System.out.println("This  is not a prime Number");
+     }
+ }
+} 
+-----------------------------------------------------------------------------------------------------------------
 
+    
 
     
     
