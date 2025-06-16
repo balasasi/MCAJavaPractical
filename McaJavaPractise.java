@@ -243,7 +243,44 @@ class CheckPrimeNumberOrNot
  }
 } 
 -----------------------------------------------------------------------------------------------------------------
+// Generate the prime Numbers    
+import java.util.stream.IntStream;
+public class generatePrimeNumber
+{
+    public static void main (String [] args)
+    {
+        IntStream.iterate(2,i->i+1).filter(generatePrimeNumber::isPrime).limit(20).forEach(System.out::println);
+    }
+    public static boolean isPrime(int number)
+    {
+        if(number<2) return false;
+        return IntStream.rangeClosed(2,(int)(Math.sqrt(number))).allMatch(i-> number%i !=0);
+    }
+}
+-------------------------------------------------------------------------------------------------------------------
+//String is panlindrom or not
+ import java.util.Scanner;
+class StringIsPandliromOrNot
+{
+    public static void main(String[] args)
+    {
+        Scanner sc =new Scanner(System.in);
+        String input =sc.nextLine();
+        String reversedString=new StringBuilder(input).reverse().toString();
+        if(input.equals(reversedString))
+        {
+            System.out.println("This String is panlindrom");
+        }
+        else
+        {
+                        System.out.println("This String is not panlindrom");
 
+        }
+    }
+}   
+
+----------------------------------------------------------------------------------------------------------------------------
+    
     
 
     
