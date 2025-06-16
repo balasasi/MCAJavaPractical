@@ -1,3 +1,4 @@
+//EvenOrNot
 class evenOrNot
 {
     public static void main (String[] args)
@@ -14,8 +15,8 @@ class evenOrNot
     }
 }
 -------------------------------------------------------------------
-  import java.util.Scanner;
-
+ //Celuis to Fahrenheit
+ import java.util.Scanner;
 class TempIntoFarh
 {
     public static void main(String [] args)
@@ -30,8 +31,8 @@ class TempIntoFarh
     }    
 }
 --------------------------------------------------------------------------------
-  import java.util.Scanner;
-
+ //AreaOfTriangle
+import java.util.Scanner;
 class AreaOfTirangle
 {
   public static void main (String[] args)
@@ -55,6 +56,7 @@ class AreaOfTirangle
   }
 }
 -------------------------------------------------------------
+// Average the integer
 import java.util.List;
 import java.util.Arrays;
 class FindOutAverger
@@ -67,7 +69,8 @@ class FindOutAverger
  }     
 }
 -----------------------------------------------------------------------
-  import java.util.List;
+//Product of number
+import java.util.List;
 import java.util.Arrays;
 class productOfRealNumber
 {
@@ -114,46 +117,7 @@ class checkNumberIsMultipleByFive
      sc.close();
  }
 }
------------------------------------------------------------------------------------------------------------------
-import java.util.Scanner;
-class checkNumberIsMultipleByFive
-{
- public static void main(String[] args)
- {
-     Scanner sc=new Scanner(System.in);
-     System.out.println("Enter the number :");
-     int number=sc.nextInt();
-     if(number%5 ==0)
-     {
-      System.out.println("Given number is multiple by 5");
-     }
-     else
-     {
-      System.out.println("Given number is  not multiple by 5");  
-     }
-     sc.close();
- }
-}
-------------------------------------------------------------------------------------------------------------------------
-import java.util.Scanner;
-class checkNumberIsMultipleByFive
-{
- public static void main(String[] args)
- {
-     Scanner sc=new Scanner(System.in);
-     System.out.println("Enter the number :");
-     int number=sc.nextInt();
-     if(number%35 ==0)
-     {
-      System.out.println("Given number is multiple by 5");
-     }
-     else
-     {
-      System.out.println("Given number is  not multiple by 5");  
-     }
-     sc.close();
- }
-}
+
 -----------------------------------------------------------------------------------------------------------------
 import java.util.Scanner;
 class AverageCalculator
@@ -177,7 +141,7 @@ class AverageCalculator
  }
 }
 -----------------------------------------------------------------------------------------------------------------------------
-    import java.util.Scanner;
+ import java.util.Scanner;
 class ReverseNumber
 {
   public static void main (String [] args)
@@ -281,6 +245,83 @@ class StringIsPandliromOrNot
 
 ----------------------------------------------------------------------------------------------------------------------------
     
+//    First Iteration (i = 0):
+//    Row 0 in matrixA: {1, 2, 3}
+//    Row 0 in matrixB: {7, 8, 9}
+//    For each column index j:
+//    j = 0: 1 + 7 = 8
+//    j = 1: 2 + 8 = 10
+//   j = 2: 3 + 9 = 12
+//   Result row: {8, 10, 12}
+
+
+// Addition of 2D Matrix
+import java.util.stream.IntStream;
+import java.util.Arrays;
+class addTwoMatrix
+{
+    public static void main (String[] args)
+    {
+        int [][] matrixA={{1,2,3},{4,5,6}};
+        int [][] matrixB={{7,8,9},{10,11,12}};
+    
+        
+          int[][] matrixAddition = IntStream.range(0, matrixA.length)
+            .mapToObj(i ->
+                IntStream.range(0, matrixA[0].length)
+                         .map(j -> matrixA[i][j] + matrixB[i][j])
+                         .toArray()
+                         
+                         
+            )
+            .toArray(int[][]::new);
+        for (int[] row:matrixAddition)  
+        {
+            System.out.println(Arrays.toString(row));
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+ //leap year or not
+ class checkLeapYearOrNot
+{
+public static void main (String[] args)
+ {
+     int year =2025;
+     if(year%400 ==0 || (year%100 !=0 && year%4 ==0) )
+     {
+         System.out.println("This is a leap year");
+     }
+     else
+     {
+         System.out.println("This is not a leap year");
+     }
+     
+ }
+ 
+}
+----------------------------------------------------------------------------------------------------------------------------------------------
+//find the larger and smallest number from the set of 10 randomly draw integer from 1 to 100
+//in stream
+
+    
+import java.util.Random;
+import java.util.Arrays;
+class RandomNumberSmallAndlarger
+{
+ public static void main (String[] args)
+ {
+  Random r=new Random();
+  int[] number =r.ints(10,1,101).peek(System.out::println).toArray();
+  int min=Arrays.stream(number).min().orElseThrow();
+  int max=Arrays.stream(number).max().orElseThrow();
+  System.out.println("Minium==>"+min);
+  System.out.println("Minium==>"+max);
+  
+  
+ }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------
     
 
     
